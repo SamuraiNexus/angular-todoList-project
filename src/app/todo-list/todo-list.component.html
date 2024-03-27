@@ -1,0 +1,10 @@
+<ul>
+  @for (item of todos; track item.id) {
+    <li><a routerLink="{{item.id}}">{{item.title | stringModify}}</a>
+      <button (click)="deleteTodo(item.id)">delete</button>
+    </li>
+    
+  } @empty{
+    Empty list of users
+  }
+</ul>
